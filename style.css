@@ -1,0 +1,143 @@
+body {
+    height: 100vh;
+    background-image: url('https://images.unsplash.com/photo-1523901839036-a3030662f220?q=80&w=2370&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+label{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+button {
+    border: none;
+    font-weight: bold;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 10px 0;
+}
+
+input[type="number"] {
+    padding: 10px;
+    border: none;
+    border-bottom: 2px solid #fff;
+    background-color: transparent;
+    color: #fff;
+    font-size: 16px;
+    text-align: right;
+}
+#main-div {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#calculator-div {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    padding: 15px;
+    width: 70vw;
+    max-width: 70vh;
+    max-height: 70vh;
+    background-color: rgba(0, 0, 0, 0.5); /* Optional: background color for visibility */
+    transform: scale(0.8); /* Start with a scaled down version */
+    opacity: 0; /* Start with full transparency */
+    transition: transform 1s ease-out, opacity 1s ease-out; /* Animate scaling and opacity */
+}
+
+/* Final state for the calculator div */
+#calculator-div.visible {
+    transform: scale(1); /* Final size */
+    opacity: 1; /* Final opacity */
+}
+
+#bmi-title {
+    font-size: 2rem; /* Adjust size as needed */
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    width: 100%;
+    margin: 2%;
+}
+
+#description-label {
+    font-weight: bold;
+    color: white;
+    width: 80%;
+}
+
+.prompt-div {
+    margin-top: 5%;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+}
+
+.prompt-label {
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    background-color: rgba(255, 255, 255, 0.5);
+    padding:8px;
+}
+
+#result-div {
+    padding: 15px;
+    visibility: hidden;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    width: 0; /* Start with 0 width */
+    height: 0; /* Start with 0 height */
+    opacity: 0; /* Start with full transparency */
+    max-width: 70vh;
+    max-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+    gap: 15px;
+    transition: width 1s ease-in-out, height 1s ease-in-out, opacity 1s ease-in-out; /* Animation for width, height, and opacity */
+}
+#result-img {
+    width: 70vw;
+    max-width: 70vh;
+    max-height: 70vh;
+}
+
+#bmi-result-label{
+    font-weight: bold;
+    color: white;
+}
+
+#conclusion-label{
+    font-weight: bold;
+    color: white;
+}
+
+#calculate-btn {
+    padding: 10px;
+    border: 0;
+    background-color: green;
+    color: white;
+    font-size: large;
+}
+
+#calculate-btn:disabled {
+    background-color: grey;
+    color: darkgrey;
+    cursor: not-allowed; 
+    opacity: 0.6; 
+}
+
+#clear-btn {
+    padding: 10px;
+    border: 0;
+}
+
+/* TODO: Make the inputs more visible, use place holders */

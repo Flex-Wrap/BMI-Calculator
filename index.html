@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> BMI Calculator </title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <div id="main-div">
+        <div id="calculator-div">
+            <label id="bmi-title"> BMI Calculator </label>
+            <label id="description-label"> It is important to calculate your BMI to know if you weigh too much relative to your height </label>
+            <div class="prompt-div">
+                <label class="prompt-label"> Enter your weight in kilos</label>
+                <input id="weight-input" type="number" min="30.0" value="0">
+            </div>
+            <div class="prompt-div">
+                <label class="prompt-label"> Enter your height in centimeters</label>
+                <input id="height-input" type="number" value="0">
+            </div>
+            <button id="calculate-btn"> Calculate </button>
+        </div>
+        <div id="result-div">
+            <label id="bmi-result-label"></label>
+            <label id="conclusion-label"></label>
+            <img id="result-img" alt="BMI Result Image">
+            <button id="clear-btn"> Clear </button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
